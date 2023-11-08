@@ -1,23 +1,55 @@
-name: CI
+name: Validator
 
 on:
   push:
-    branches: [ '*' ]
+    branches:
+      - master
   pull_request:
-    branches: [ '*' ]
+    types:
+      - opened
+      - reopened
+      - synchronize
+      
+env:
+  RUBY_VERSION: '2.6'
+
+defaults:
+  run:
+    shell: bash
 
 jobs:
-  build:
-
+  validator:
+    name: Validator
     runs-on: ubuntu-latest
-
     steps:
-    - uses: actions/checkout@v3
-    - name: Set up Ruby 2.6
+    - id: setup-ruby
+      name: Setup Ruby
       uses: ruby/setup-ruby@v1
       with:
-        ruby-version: '2.6'
-    - name: Checks
+        ruby-version: ${{ env.RUBY_VERSION }}
+
+    - id: checkout
+      name: Checkout
+      uses: actions/checkout@v2
+
+    - id: install-gem
+      name: Install gem
       run: |
         gem install awesome_bot
-        awesome_bot README.md --allow-redirect
+
+    - id: validate
+      name: Validate
+      run: |
+        awesome_bot README.md --request-delay 0.5 --allow-timeout --allow-redirect
+        
+    - id: upload-artifact
+      name: Upload artifact
+      uses: actions/upload-artifact@v2
+      if: failure()
+      with:
+        if-no-files-found: warn
+        name: ab-results
+        path: |
+          ab-results-README.md.json
+          ab-results-README.md-filtered.json
+          ab-results-README.md-markdown-table.json
