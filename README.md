@@ -1,4 +1,4 @@
-# awesome-gpts
+# Awesome GPTs
 
 ## Introduction
 This repository provides a curated list of GPTs created with the OpenAI.
@@ -12,10 +12,10 @@ This repository provides a curated list of GPTs created with the OpenAI.
 - [Contribute](#contribute)
 
 ## Official Resources
-
 - [ChatGPT App](https://chat.openai.com/)
 - [ChatGPT Docs](https://platform.openai.com/docs/)
 - [ChatGPT API Key](https://platform.openai.com/account/api-keys)
+- [Creating a GPT](https://help.openai.com/en/articles/8554397-creating-a-gpt)
 
 ## Applications
 * [Conversational AI](#conversational-ai)
