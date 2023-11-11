@@ -1,11 +1,24 @@
-# Awesome GPTs
-
-## Introduction
-This repository provides a curated list of GPTs created with the OpenAI.
+<div align="center">
+  <h2 align="center">Awesome-GPTs ⭐</h2>
+  <p align="center">
+    <img width="650" src="https://raw.githubusercontent.com/umutbozdag/awesome-gpts/main/gpts.jpg">
+  </p>
+  <p align="center">
+    <p align="center"> This repository provides a curated list of GPTs created with the OpenAI.</p>
+  </p>
+  <h4 align="center">
+    <a href="https://awesome.re">
+      <img src="https://awesome.re/badge.svg" alt="Awesome" />
+    </a>
+    <a href="http://makeapullrequest.com">
+      <img src="https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square" alt="http://makeapullrequest.com" />
+    </a>
+  </h4>
+</div>
 
 ## Table of Contents
 - [Official Resources](#official-resources)
-- [Applications](#GPTs)
+- [GPTs](#GPTs)
 - [Miscellaneous](#miscellaneous)
 - [Alternatives](#alternatives)
 - [Discussion Forums](#discussion-forums)
